@@ -4,5 +4,5 @@
 ## 安装
 ```
 npm install pwu-cli -g
-npm 
+pwu create demo
 ```

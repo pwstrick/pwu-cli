@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+const fs = require('fs');
 const path = require('path');
 const ora = require('ora');
 const chalk = require('chalk');
@@ -16,9 +17,13 @@ program
     spinner.start();
 	const destination = path.join(process.cwd(), name);
 	//console.log(destination);
-	download('github:pwstrick/pwu', destination, (msg) => {
+	if(fs.existsSync(destination)) {
+      console.log(chalk.red('脚手架已存在'));
+	  return;
+	}
+	download('github:pwstrick/pwu', destination, (err) => {
       spinner.stop();
-	  console.log(msg);
+	  //console.log(err);					
 	  console.log(chalk.green('脚手架下载成功'));
 	});
   });
