@@ -1,0 +1,28 @@
+{
+  "name": "pwu-cli",
+  "version": "1.0.0",
+  "description": "命令行脚手架示例",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --config ./config/webpack.dev.config.js",
+    "build": "webpack --config ./config/webpack.prod.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pwstrick/pwu-cli.git"
+  },
+  "bin": {
+    "pwu": "./bin/pwu.js"
+  },
+  "author": "strick",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pwstrick/pwu-cli/issues"
+  },
+  "homepage": "https://github.com/pwstrick/pwu-cli#readme",
+  "dependencies": {
+    "chalk": "^4.0.0",
+    "commander": "^5.0.0",
+    "ora": "^4.0.3"
+  }
+}
